@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <style>
+        .me {
+            font-size: 1vw;
+        }
+        #age {
+            font-size: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <h1>About Me</h1>
+    <img src="img/aboutme.jpg" alt="About me" width="250" height="300">
+
+    <div class="me">
+        <p>My name is kok zhen and I am a UIUX designer in Singapore. I like having a clean and minimalist design.
+            I pay attention to aesthetics in design.</p>
+    </div>
+
+    <div class="age">
+        <p>I am <span id="age">19</span> years old.</p>
+    </div>
+
+    <div class="me">
+        <a href="MyFavFood.html">Next page&gt;</a>
+    </div>
+
+    <script>
+        anime({
+            targets: 'h1',
+            translateX: 250,
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutExpo'
+        });
+    </script>
+
+    <script>
+        anime({
+            targets: 'img, .me',
+            translateY: -150,
+            rotate: 360,
+            delay: anime.stagger(300, { start: 1000 }),
+            direction: 'alternate'
+        });
+
+        anime({
+            targets: "#age",
+            innerHTML: [0, 19],
+            easing: 'linear',
+            round: 1,
+            duration: 2000
+        });
+    </script>
+</body>
+
+</html>
