@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>full page</title>
+    
+    <style>
+        .section {
+            text-align: center;
+            color: white;
+            font-size: 3vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .slide {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    
+    <div id="fullpage">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">
+            <div class="slide">
+                <img src="img/aboutme.jpg" alt="Image Alt Text"  height="900">
+            </div>
+            <div class="slide">
+                <img src="img/japan.jpg" alt="Image Alt Text"  height="700">
+            </div>
+            <div class="slide">
+                <img src="img/Mt fuji.webp" alt="Image Alt Text"  height="700">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#03A9F4', '#2ECC71', '#00BCD4'],
+                navigation: true,
+                navigationPosition: 'right',
+                anchors: ['section1', 'section2', 'section3']
+            });
+        });
+    </script>
+
+    <a href="#section3">Go to Section 3</a>
+    <a href="#section3/1">Go to Section 3 Slide 2</a>
+</body>
+
+</html>
